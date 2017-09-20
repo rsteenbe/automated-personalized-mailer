@@ -1,0 +1,5 @@
+<persistence>
+    <persistence-unit name="RecipientService">
+        <jta-data-source>RecipientDS</jta-data-source>
+    </persistence-unit>
+</persistence>

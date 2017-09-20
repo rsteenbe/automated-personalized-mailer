@@ -4,7 +4,7 @@
 
 *Summary* : Java mailing tool that can be used to send multiple e-mails with the same content, including personalized salutations. 
 
-*IDE* : IntelliJ IDEA, Notepad++
+*IDE & Technologies* : IntelliJ IDEA, Notepad++, Maven 3.5.0, JPA 2.0, RESTful Webservices
 
 ## Purpose
 This is a Java mailing tool that can be used to send a personal e-mail to multiple adresses. 
