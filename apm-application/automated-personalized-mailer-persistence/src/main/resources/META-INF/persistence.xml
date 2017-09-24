@@ -1,5 +1,5 @@
 <persistence>
     <persistence-unit name="RecipientService">
-        <jta-data-source>RecipientDS</jta-data-source>
+        <jta-data-source>java:jboss/jdbc/RecipientDS</jta-data-source>
     </persistence-unit>
 </persistence>
