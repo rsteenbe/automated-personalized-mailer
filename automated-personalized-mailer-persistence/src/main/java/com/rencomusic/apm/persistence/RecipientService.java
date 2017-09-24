@@ -21,7 +21,7 @@ public class RecipientService {
         return entityManager;
     }
 
-    public Recipient createArtist(String name, String mail, String category) {
+    public Recipient createRecipient(String name, String mail, String category) {
         Recipient recipient = new Recipient();
         recipient.setName(name);
         recipient.setMail(mail);

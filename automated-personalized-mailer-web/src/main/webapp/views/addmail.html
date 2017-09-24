@@ -1,0 +1,23 @@
+<h2>Add Recipient</h2>
+
+<form name="recipientForm" ng-submit="submitForm()">
+    <div class="form-group">
+        <label>Name</label>
+        <input ng-disabled="mailAdded" type="text" name="name" class="form-control" ng-model="recipient.name" required>
+        <span ng-show="errorName">{{errorRecipientName}}</span>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input ng-disabled="mailAdded" type="email" name="mail" class="form-control" ng-model="recipient.mail" required>
+        <span ng-show="errorEmail">{{errorRecipientEmail}}</span>
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <input ng-disabled="mailAdded" type="text" name="category" class="form-control" ng-model="recipient.category" required>
+        <span ng-show="errorEmail">{{errorRecipientCategory}}</span>
+    </div>
+    <button ng-disabled="mailAdded" type="submit" class="btn btn-primary">Submit</button>
+    <span ng-show="mailAdded">Record added!</span>
+</form>

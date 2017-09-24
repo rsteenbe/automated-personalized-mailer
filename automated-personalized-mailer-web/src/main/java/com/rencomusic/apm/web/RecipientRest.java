@@ -24,9 +24,8 @@ public class RecipientRest {
     @Path("/create")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createRecipient(Recipient recipient) {
-        Recipient result = recipientService.createArtist(recipient.getName(), recipient.getMail(), recipient.getCategory());
-        String x = "" + result.getId() + " " + result.getName() + " " + result.getMail() + " " + result.getCategory();
-        System.out.println(x);
+        Recipient result = recipientService.createRecipient(recipient.getName(), recipient.getMail(), recipient.getCategory());
+        String x = "Creating: " + result.getId() + " " + result.getName() + " " + result.getMail() + " " + result.getCategory();
         return Response.status(200).entity(x).build();
     }
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        .navbar { border-radius:0; }
+        textarea {
+            resize: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/addMailController.js"></script>
+</head>
+
+<body ng-app="routerApp">
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand">APM</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="addmail">Add Mail</a></li>
+        <li><a ui-sref="listing">Listing</a></li>
+        <li><a ui-sref="mail">Compose</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div ui-view></div>
+</div>
+
+</body>
+</html>
