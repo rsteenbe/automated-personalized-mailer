@@ -16,6 +16,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/addmail.html',
             controller: 'addMailController'
         })
+        .state('mailinglist', {
+            url: '/mailinglist',
+            templateUrl: 'views/mailinglist.html',
+            controller: 'mailingListController'
+        })
 });
 
 
