@@ -11,6 +11,7 @@
     <modules>
         <module>automated-personalized-mailer-persistence</module>
         <module>automated-personalized-mailer-web</module>
+        <module>automated-personalized-mailer-mail</module>
     </modules>
 
     <dependencyManagement>

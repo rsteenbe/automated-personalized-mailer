@@ -1,0 +1,30 @@
+<h2>Compose Mail</h2>
+
+<p>Add &#60;recipient&#62; in the message field where you want to show the name of the recipient.</p>
+
+<form name="mailDataForm" ng-submit="sendForm()">
+    <div class="form-group">
+        <label>Group Category</label>
+        <input ng-disabled="isDisabled" type="text" name="to" class="form-control" ng-model="maildata.category" required>
+        <span ng-show="errorName">{{errorCategory}}</span>
+    </div>
+
+    <div class="form-group">
+        <label>Subject</label>
+        <input ng-disabled="isDisabled" name="subject" class="form-control" ng-model="maildata.subject" required>
+        <span ng-show="errorSubject">{{errorSubject}}</span>
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea ng-disabled="isDisabled" rows="10" type="text" name="mailMessage" class="form-control" ng-model="maildata.message" required></textarea>
+        <span ng-show="errorMailMessage">{{errorMailMessage}}</span>
+    </div>
+    <button ng-disabled="isDisabled" type="submit" class="btn btn-primary">Send</button>
+    <span ng-show="message1">{{message1}}</span>
+    <span ng-show="message2">{{message2}}</span>
+</form>
+
+
+
+

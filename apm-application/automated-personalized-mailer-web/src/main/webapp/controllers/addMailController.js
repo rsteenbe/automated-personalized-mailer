@@ -33,5 +33,3 @@ routerApp.controller('addMailController', function($scope, $http, $timeout) {
         $scope.recipient={};
     };
 });
-
-

@@ -34,4 +34,11 @@ public class RecipientService {
         TypedQuery query = getEntityManager().createQuery("SELECT r FROM Recipient r", Recipient.class);
         return query.getResultList();
     }
+
+    public List findByCategory(String name) {
+        return  entityManager.createQuery(
+                "SELECT r FROM Recipient r WHERE r.category LIKE :name")
+                .setParameter("name", name)
+                .getResultList();
+    }
 }
