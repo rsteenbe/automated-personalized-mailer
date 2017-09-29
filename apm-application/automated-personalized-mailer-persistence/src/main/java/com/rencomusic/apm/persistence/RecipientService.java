@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -40,5 +41,13 @@ public class RecipientService {
                 "SELECT r FROM Recipient r WHERE r.category LIKE :name")
                 .setParameter("name", name)
                 .getResultList();
+    }
+
+    public List findByMail(String mail) {
+        return  entityManager.createQuery(
+                        "SELECT r FROM Recipient r WHERE r.mail LIKE :mail")
+                        .setParameter("mail", mail)
+                        .setMaxResults(1)
+                        .getResultList();
     }
 }

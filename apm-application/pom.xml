@@ -12,6 +12,7 @@
         <module>automated-personalized-mailer-persistence</module>
         <module>automated-personalized-mailer-web</module>
         <module>automated-personalized-mailer-mail</module>
+        <module>automated-personalized-mailer-xlsx</module>
     </modules>
 
     <dependencyManagement>
@@ -21,6 +22,11 @@
                 <artifactId>javaee-api</artifactId>
                 <version>7.0</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>3.15</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,12 +1,13 @@
 #!/bin/bash
 echo '====================> Wildfly installation started <===================='
-WILDFLY_FILE=/vagrant/apm-vagrant/wildfly-11.0.0.CR1.tar.gz
+WILDFLY_FILE=/vagrant/downloads/wildfly-11.0.0.CR1.tar.gz
 
 if [ -f "$WILDFLY_FILE" ]; then
 	echo 'Wildfly TGZ found.'
 else
 	echo 'No Wildfly TGZ found, it will download Wildfly from jboss.org'
-	cd /vagrant/apm-vagrant
+	mkdir -p /vagrant/downloads
+	cd /vagrant/downloads
 	echo 'Download started, this process may take a while...'
 	wget -q http://download.jboss.org/wildfly/11.0.0.CR1/wildfly-11.0.0.CR1.tar.gz
 	echo 'Download finished.'
