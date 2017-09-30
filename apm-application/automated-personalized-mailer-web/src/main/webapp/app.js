@@ -26,4 +26,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/composemail.html',
             controller: 'composeMailController'
         })
+        .state('importmailing', {
+            url: '/importmailing',
+            templateUrl: 'views/importmailing.html',
+        })
 });
