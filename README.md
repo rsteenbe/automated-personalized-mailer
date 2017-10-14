@@ -26,7 +26,7 @@ Quick Start - Windows 7
 * Replace the property values within brackets and add your own credentials. Save the file.
 
 
-* Open the command prompt `cmd.exe` and go to `${project-dir}/`
+* Open the command prompt `cmd.exe` and go to `${project-dir}` (By default `automated-personalized-mailer`)
 * Run the following command in the command prompt: `vagrant up --provider=virtualbox`. This process may take a while...
 * Enter the following URL in the browser: `http://localhost:8080/apm`
 * Enter your name, e-mail and a random category (e.g. Test) and press submit.
