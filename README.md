@@ -35,3 +35,9 @@ Quick Start - Windows 7
 * Go to the top menu again and click on Compose Mail
 * Enter the category again, add a Subject and type the following "Hi \<recipient\>!"
 * Now check your e-mail and see if it works!
+
+## Import Xlsx Excel files
+
+* After running the quick start installation, go to `http://localhost:8080/apm` and click the 'Import Mailing' tab in the top menu. Browse the excel file `test.xlsx` and click the `Import XLSX` button.
+
+* Now check `http://localhost:8080/apm/#/mailinglist` to see if the e-mails are imported.
