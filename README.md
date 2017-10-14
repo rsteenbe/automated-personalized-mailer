@@ -41,3 +41,17 @@ Quick Start - Windows 7
 * After running the quick start installation, go to `http://localhost:8080/apm` and click the 'Import Mailing' tab in the top menu. Browse the excel file `test.xlsx` and click the `Import XLSX` button.
 
 * Now check `http://localhost:8080/apm/#/mailinglist` to see if the e-mails are imported.
+
+## Database Backup
+
+* In case the database needs a back-up, open the command prompt and go to `${project-dir}`
+* Be sure the vagrant box is built as written in the Quick Start.
+* Enter the following command `vagrant ssh`.
+* Now login as postgres user by typing the command `sudo su - postgres`. 
+* Go to the `vagrant` dir by typing following command `cd /vagrant`.
+* Enter `pg_dumpall > apm_db.sql` to create a backup.
+
+## Database Restore
+
+* Follow the steps from the Database Backup, except the last one.
+* Enter `psql postgres < db_file` (For example `psql postgres < apm_db.sql`)
