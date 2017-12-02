@@ -35,6 +35,23 @@ Example: If multiple e-mails with the same content need to be sent, one to Joe, 
 * Enter the category again, add a Subject and type the following "Hi \<recipient\>!"
 * Now check your e-mail and see if it works!
 
+## Quick Start -Raspberry Pi 3
+
+* Before installing the application, be sure the raspberry pi is configured. Follow the [NOOBS Setup](https://www.raspberrypi.org/help/noobs-setup/2/)
+and be sure the Raspberry SSH is enabled, follow the [SSH Tutorial](https://www.raspberrypi.org/documentation/remote-access/ssh/)
+* Run the following commands: 
+`sudo apt-get update`
+`sudo apt-get install git-core`
+
+* When everything is configured, go to the temporary folder using the following command `cd /tmp`
+* Enter the command `git clone https://github.com/rsteenbe/automated-personalized-mailer.git`
+
+* Now open `smtp.properties` which is located at `/tmp/automated-personalized-mailer/apm-application/automated-personalized-mailer-mail/src/main/resources/`
+* Replace the property values within brackets and add your own credentials. Save the file.
+
+* Run the following command in the terminal: `sudo sh /tmp/automated-personalized-mailer/apm-rpi/full-install-rpi3.sh`. This process may take a while...
+* Enter `hostname -I` to check the ip address and go to the browser and enter `<ip-address>/apm`
+
 ## Import Xlsx Excel files
 
 * After running the quick start installation, go to `http://localhost:8080/apm` and click the 'Import Mailing' tab in the top menu. Browse the excel file `test.xlsx` and click the `Import XLSX` button.
